@@ -1,4 +1,5 @@
 import music
+import sys
 from microbit import display, Image
 
 while True:
@@ -12,7 +13,7 @@ while True:
     except Exception as e:
         display.show(Image.CONFUSED)
         music.pitch(55, 1000, wait=False)
-        print(e)
+        sys.print_exception(e)
     else:
         if val is True:
             display.show(Image.HAPPY)
