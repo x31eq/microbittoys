@@ -21,7 +21,7 @@ def sayrepr():
             if val is True:
                 display.show(Image.HAPPY)
                 sleep(100)
-                speech.say("is true")
+                speech.say("is right")
             elif val is False:
                 display.show(Image.SAD)
                 sleep(100)
