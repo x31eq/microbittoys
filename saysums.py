@@ -2,6 +2,19 @@ import sys
 import speech
 from microbit import display, Image, sleep
 
+numbers = {
+        10: 'ten',
+        11: 'eleven',
+        12: 'twelve',
+        13: 'thirteen',
+        14: 'fourteen',
+        15: 'fifteen',
+        16: 'sixteen',
+        17: 'seventeen',
+        18: 'eighteen',
+        19: 'nineteen',
+        }
+
 def sayrepr():
     while True:
         line = input('>>> ')
@@ -29,7 +42,7 @@ def sayrepr():
                 speech.say("is false")
             elif isinstance(val, int):
                 speech.say("equals")
-                speech.say(str(val))
+                speech.say(numbers.get(val, str(val)))
                 display.clear()
             else:
                 display.clear()
