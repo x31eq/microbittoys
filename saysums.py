@@ -2,6 +2,7 @@ import sys
 import speech
 from microbit import display, Image, sleep, button_a
 
+
 numbers = {
         10: 'ten',
         11: 'eleven',
@@ -14,6 +15,7 @@ numbers = {
         18: 'eighteen',
         19: 'nineteen',
         }
+
 
 def sayrepr():
     while True:
@@ -36,21 +38,25 @@ def command():
         sys.print_exception(e)
         speech.say("I don't understand")
     else:
+        if val is True:
+            display.show(Image.YES)
+        elif val is False:
+            display.show(Image.NO)
+        elif isinstance(val, int):
+            display.clear()
+
         if val is not None:
             print(str(val))
             speech.say(line)
         if val is True:
-            display.show(Image.YES)
             sleep(100)
             speech.say("is right")
         elif val is False:
-            display.show(Image.NO)
             sleep(100)
             speech.say("is false")
         elif isinstance(val, int):
             speech.say("equals")
             speech.say(numbers.get(val, str(val)))
-            display.clear()
         else:
             display.clear()
 
