@@ -17,8 +17,10 @@ numbers = {
 
 def sayrepr():
     while True:
+        display.show(Image.CHESSBOARD)
         while not button_a.was_pressed():
             command()
+        display.show(Image.STICKFIGURE)
         while not button_a.was_pressed():
             speech.say(input('? '))
 
@@ -38,11 +40,11 @@ def command():
             print(str(val))
             speech.say(line)
         if val is True:
-            display.show(Image.HAPPY)
+            display.show(Image.YES)
             sleep(100)
             speech.say("is right")
         elif val is False:
-            display.show(Image.SAD)
+            display.show(Image.NO)
             sleep(100)
             speech.say("is false")
         elif isinstance(val, int):
