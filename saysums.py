@@ -39,7 +39,7 @@ def command():
         speech.say("I don't understand")
     else:
         if val is True:
-            display.show(Image.YES)
+            display.show(Image.HAPPY)
         elif val is False:
             display.show(Image.NO)
         elif isinstance(val, int):
