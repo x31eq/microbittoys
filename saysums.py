@@ -13,10 +13,11 @@ def sayrepr():
             break
         except Exception as e:
             display.show(Image.CONFUSED)
-            speech.say("I don't understand")
             sys.print_exception(e)
+            speech.say("I don't understand")
         else:
             if val is not None:
+                print(str(val))
                 speech.say(line)
             if val is True:
                 display.show(Image.HAPPY)
@@ -32,8 +33,6 @@ def sayrepr():
                 display.clear()
             else:
                 display.clear()
-            if val is not None:
-                print(str(val))
 
 
 if __name__ == '__main__':
