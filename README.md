@@ -21,9 +21,9 @@ There's a good croc-clip headphone adapter for this.
 To set up the software, if you've forgotten how to flash Python to
 your micro:bit, get a Python 3 virtualenv or something and
 
-pip install uflash
-pip install microfs
-uflash saysums.py /media/sdb
+> ``pip install uflash``
+> ``pip install microfs``
+> ``uflash saysums.py /media/sdb``
 
 It might not work with /media/sdb an you get a message saying
 
