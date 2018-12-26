@@ -44,7 +44,7 @@ def command():
         elif val is False:
             display.show(Image.NO)
         elif isinstance(val, int):
-            display.clear()
+            display.show(Image.CHESSBOARD)
 
         if val is not None:
             print(str(val))
@@ -58,8 +58,6 @@ def command():
         elif isinstance(val, int):
             speech.say("equals")
             speech.say(numbers.get(val, str(val)))
-        else:
-            display.clear()
 
 
 if __name__ == '__main__':
