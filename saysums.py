@@ -25,7 +25,9 @@ def sayrepr():
             command()
         display.show(Image.STICKFIGURE)
         while not button_a.was_pressed():
-            speech.say(input('? '))
+            line = input('? ')
+            if line:
+                speech.say(line)
 
 
 def command():
